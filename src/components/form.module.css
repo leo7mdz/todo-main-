@@ -1,0 +1,35 @@
+.form {
+    display: flex;
+    width: 100%;
+    padding: .7rem;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: .3rem;
+
+}
+
+.spanCircle {
+    width: 1.7rem;
+    height: 1.7rem;
+    border: 1.5px solid grey;
+    border-radius: 50%;
+}
+
+.inputTask {
+    flex-grow: 1;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    border: transparent;
+    outline: transparent;
+    padding: .4rem 1rem;
+    font-size: 1.2rem;
+}
+
+.buttonTask {
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: inherit;
+    border: transparent;
+    outline: transparent;
+}

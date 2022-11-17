@@ -1,0 +1,23 @@
+.section {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.actions {
+    width: 100%;
+    margin-top: 1rem;
+    padding: .7rem 1rem;
+    border-radius: .4rem;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+    box-shadow: .1rem .3rem .2rem rgba(245, 239, 239, 0.7);
+
+}
+
+.action {
+    text-decoration: none;
+    color: grey;
+    font-size: 1.1rem;
+    letter-spacing: .1rem;
+}

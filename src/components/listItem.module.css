@@ -1,0 +1,30 @@
+.spanRounded {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spanChecked {
+    background-image: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
+}
+
+.taskItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task {
+    flex-grow: 1;
+    padding-left: 1.4rem;
+    font-size: 1.2rem;
+}
+
+.taskComplete {
+    color: grey;
+    text-decoration: line-through;
+}
