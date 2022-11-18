@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useDispatch } from "react-redux";
 import { deleteTask } from "../features/tasks/tasksSlice";
 import style from "./listItem.module.css";
@@ -26,6 +26,7 @@ const ListItem = ({ task }) => {
           {task.task}
         </p>
         <img
+          className={style.close}
           onClick={() => dispatch(deleteTask(task.id))}
           src="/icon-cross.svg"
           alt="icon cross"

@@ -38,8 +38,12 @@ export const tasksSlice = createSlice({
         task.id === action.payload.id ? action.payload : task
       );
     },
+    clearCompleted: (state, action) => {
+      return state.filter((task) => task.done !== true);
+    },
   },
 });
 
-export const { addTask, deleteTask, updateTask } = tasksSlice.actions;
+export const { addTask, deleteTask, updateTask, clearCompleted } =
+  tasksSlice.actions;
 export const tasksReducer = tasksSlice.reducer;

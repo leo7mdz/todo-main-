@@ -6,6 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .spanChecked {
@@ -27,4 +28,8 @@
 .taskComplete {
     color: grey;
     text-decoration: line-through;
+}
+
+.close {
+    cursor: pointer;
 }
