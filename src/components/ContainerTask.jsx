@@ -1,4 +1,4 @@
-import { useLayoutEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { useSelector } from "react-redux";
 
 import style from "./containerTask.module.css";
@@ -6,8 +6,15 @@ import ListItem from "./listItem";
 
 const ContainerTask = ({ status }) => {
   const selector = useSelector((state) => state.tasks);
+  const theme = useSelector((state) => state.theme.theme);
+
+  console.log(theme);
 
   const [tareas, setTareas] = useState([]);
+
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(selector));
+  }, [selector]);
 
   useLayoutEffect(() => {
     if (status === "all") {
@@ -20,7 +27,9 @@ const ContainerTask = ({ status }) => {
   }, [selector, status]);
 
   return (
-    <div className={style.containerTask}>
+    <div
+      className={`${style.containerTask} ${theme === "dark" ? style.dark : ""}`}
+    >
       {selector.length === 0 ? (
         <p className={style.notTask}>No tasks to do</p>
       ) : (

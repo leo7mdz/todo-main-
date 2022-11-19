@@ -7,12 +7,13 @@ import style from "./actions.module.css";
 
 const Actions = ({ handleStatus }) => {
   const selector = useSelector((state) => state.tasks);
+  const theme = useSelector((state) => state.theme.theme);
   const dispatch = useDispatch();
   const length = selector.filter((task) => !task.done).length;
   return (
-    <div className={style.stats}>
+    <div className={`${style.stats}  ${theme === "dark" ? style.dark : ""}`}>
       <p>{length} Items left</p>
-      <div className={style.actions}>
+      <div className={`${style.actions} ${theme === "dark" ? style.dark : ""}`}>
         <a
           onClick={() => handleStatus("all")}
           className={style.action}

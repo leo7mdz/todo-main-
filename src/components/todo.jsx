@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import Actions from "./actions";
 import ContainerTask from "./ContainerTask";
 import Form from "./Form";
@@ -8,6 +9,7 @@ import style from "./todo.module.css";
 
 const Todo = () => {
   const [status, setStatus] = useState("all");
+
   console.log(status);
 
   const handleStatus = (status) => {

@@ -4,14 +4,19 @@
     border-radius: .4rem;
     display: flex;
     justify-content: space-between;
-    background-color: white;
+    background-color: hsl(0, 0%, 98%);
+}
+
+.containerTask.dark {
+    background-color: hsl(235, 24%, 19%);
+    color: hsl(234, 39%, 85%)
 }
 
 .notTask {
     width: 100%;
     text-align: center;
-    color: grey;
     font-weight: 500;
+    color: inherit;
 }
 
 .taskList {

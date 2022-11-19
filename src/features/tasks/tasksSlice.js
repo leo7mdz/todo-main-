@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = [
+const initialState = JSON.parse(localStorage.getItem("tasks")) || [
   {
     task: "Jog around the park 3x",
     id: 1,

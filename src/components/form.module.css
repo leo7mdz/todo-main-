@@ -4,8 +4,14 @@
     padding: .7rem;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
     border-radius: .3rem;
+    background-color: hsl(0, 0%, 98%);
+
+}
+
+.form.dark {
+    background-color: hsl(235, 24%, 19%);
+    /* color: hsl(234, 39%, 85%); */
 
 }
 
@@ -14,16 +20,23 @@
     height: 1.7rem;
     border: 1.5px solid grey;
     border-radius: 50%;
+
+
 }
 
 .inputTask {
     flex-grow: 1;
-    margin-left: .5rem;
-    margin-right: .5rem;
+    /*   margin-left: .5rem;
+    margin-right: .5rem; */
     border: transparent;
     outline: transparent;
-    padding: .4rem 1rem;
+    padding: .4rem;
     font-size: 1.2rem;
+    background-color: inherit;
+}
+
+.inputTask.dark {
+    color: hsl(234, 39%, 85%);
 }
 
 .buttonTask {

@@ -5,6 +5,7 @@ import { addTask } from "../features/tasks/tasksSlice";
 import uuid from "react-uuid";
 
 const Form = () => {
+  const selector = useSelector((state) => state.theme.theme);
   const dispatch = useDispatch();
   const initialState = {
     task: "",
@@ -21,14 +22,19 @@ const Form = () => {
     setInputValue(initialState);
   };
   return (
-    <form onSubmit={handleSubmit} className={style.form}>
+    <form
+      onSubmit={handleSubmit}
+      className={`${style.form} ${selector === "dark" ? style.dark : ""}`}
+    >
       <span className={style.spanCircle}></span>
       <input
         name="task"
         onChange={handleChange}
         type="text"
         value={inputValue.task}
-        className={style.inputTask}
+        className={`${style.inputTask} ${
+          selector === "dark" ? style.dark : ""
+        }`}
         placeholder="Create a new todo..."
       />
       <button type="submit" className={style.buttonTask}>

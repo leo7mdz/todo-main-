@@ -3,19 +3,41 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background-color: white;
+    background-color: hsl(0, 0%, 98%);
     border-radius: .4rem;
     margin-top: 1rem;
-    padding-left: .6rem;
-    padding-right: .6rem;
+    padding-left: .9rem;
+    padding-right: .9rem;
     color: grey;
     font-size: 1.1rem;
+    position: relative;
 }
 
 .actions {
     display: flex;
+    justify-content: space-evenly;
+    padding-top: .8rem;
+    padding-bottom: .8rem;
+    border-radius: .4rem;
     gap: 1rem;
+    position: absolute;
+    left: 0;
+    top: 150%;
+    width: 100%;
+    background-color: hsl(0, 0%, 98%);
+}
 
+.dark {
+    background-color: hsl(235, 24%, 19%);
+}
+
+@media screen and (min-width:650px) {
+    .actions {
+        position: relative;
+        justify-content: center;
+        gap: .5rem;
+        width: 50%;
+    }
 }
 
 .action,

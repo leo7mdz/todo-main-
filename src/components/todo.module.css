@@ -31,7 +31,13 @@
 
 @media screen and (min-width:1200px) {
     .section {
-        width: 40%;
+        width: 45%;
         padding-top: 3rem;
+    }
+}
+
+@media screen and (min-width:1400px) {
+    .section {
+        width: 40%;
     }
 }
