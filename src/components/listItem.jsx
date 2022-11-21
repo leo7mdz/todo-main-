@@ -17,14 +17,14 @@ const ListItem = ({ task }) => {
         onClick={handleClick}
         className={`${style.spanRounded} ${task.done ? style.spanChecked : ""}`}
       >
-        <img className={style.iconCheck} src="/icon-check.svg" alt="check" />
+        <img className={style.iconCheck} src="icon-check.svg" alt="check" />
       </span>
       <p className={`${style.task} ${task.done ? style.taskComplete : ""}`}>
         {task.task}
       </p>
       <img
         onClick={() => dispatch(deleteTask(task.id))}
-        src="/icon-cross.svg"
+        src="icon-cross.svg"
         alt="icon cross"
       />
     </li>
