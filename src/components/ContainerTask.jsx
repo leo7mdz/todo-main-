@@ -34,8 +34,8 @@ const ContainerTask = ({ status }) => {
         <p className={style.notTask}>No tasks to do</p>
       ) : (
         <ul className={style.taskList}>
-          {tareas.map((task) => (
-            <ListItem key={task.id} task={task} />
+          {tareas.map((task, index) => (
+            <ListItem key={task.id} task={task} index={index} />
           ))}
         </ul>
       )}

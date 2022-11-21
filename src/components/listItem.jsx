@@ -12,27 +12,22 @@ const ListItem = ({ task }) => {
   };
 
   return (
-    <div className={style.containerItem}>
-      <li className={style.taskItem}>
-        <span
-          onClick={handleClick}
-          className={`${style.spanRounded} ${
-            task.done ? style.spanChecked : ""
-          }`}
-        >
-          <img className={style.iconCheck} src="/icon-check.svg" alt="check" />
-        </span>
-        <p className={`${style.task} ${task.done ? style.taskComplete : ""}`}>
-          {task.task}
-        </p>
-        <img
-          className={style.close}
-          onClick={() => dispatch(deleteTask(task.id))}
-          src="/icon-cross.svg"
-          alt="icon cross"
-        />
-      </li>
-    </div>
+    <li className={style.taskItem}>
+      <span
+        onClick={handleClick}
+        className={`${style.spanRounded} ${task.done ? style.spanChecked : ""}`}
+      >
+        <img className={style.iconCheck} src="/icon-check.svg" alt="check" />
+      </span>
+      <p className={`${style.task} ${task.done ? style.taskComplete : ""}`}>
+        {task.task}
+      </p>
+      <img
+        onClick={() => dispatch(deleteTask(task.id))}
+        src="/icon-cross.svg"
+        alt="icon cross"
+      />
+    </li>
   );
 };
 
